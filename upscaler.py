@@ -7,16 +7,16 @@ totalAssets = 0
 totalFailures = []
 
 try:
-    indir = sys.argv[0]
+    indir = sys.argv[1]
 except IndexError:
     print("No input dir has been specified.\nWhere would you like these files to come from? (required)")
     indir = input()
 
 try:
-    outdir = sys.argv[1]
+    outdir = sys.argv[2]
 except IndexError:
     print("No output dir has been specified.\nWhere would you like these files to go? "
-          "(type \"none\" to replace all files: THIS WILL ERASE EVERY ASSET)")
+          "(type \"none\" to replace all files: THIS WILL REPLACE EVERY ASSET)")
     answer = input()
     if answer == "none":
         outdir = indir
